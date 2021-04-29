@@ -9,12 +9,13 @@ A = zeros(N, 3);            % preallocate some matricies
 R = zeros(N, 1);            % "  "
 YEAR_MIN = data(1:1);
 % initial guesses
-q_prime = 270000000; % times 10^3 for final ans
-sigma_prime = 30;
-mu_prime = 1970;
+q_prime = 200000000; % times 10^3 for final ans
+sigma_prime = 20;
+mu_prime = 1960;
 
 % single iteration for now, but will iterate until convergence eventually
-for dummy = 1:1000
+iterations = 1000;
+for dummy = 1:iterations
     for t = data(:,1)'
        % populate A
        ii = t - YEAR_MIN + 1; % derive index from year
