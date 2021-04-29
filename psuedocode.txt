@@ -1,0 +1,8 @@
+Guess a_0 b_0
+
+populate matricies of partials using these values
+
+solve for a - a_0 and b - b_0
+	add a_0 or b_0 to this value to get your new a_0 and b_0's
+
+repeat above until convergence
