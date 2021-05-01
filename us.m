@@ -39,13 +39,8 @@ end
 production_curve = q(YEAR_MIN:YEAR_MAX, q_prime, sigma_prime, mu_prime);
 max_production = max(production_curve);
 five_percent = max_production * 0.05;
-for ii = size(production_curve):-1:1
-    if production_curve(ii) > five_percent
-        val = production_curve(ii);
-    end
-    break
-end
-actual_year = YEAR_MAX - ii;
+run_out_index = find(flip(production_curve) > five_percent, 1);
+actual_year = YEAR_MAX - run_out_index;
 x = YEAR_MIN:YEAR_MAX;
 figure
 plot(x, production_curve);
