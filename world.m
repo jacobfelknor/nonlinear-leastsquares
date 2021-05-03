@@ -9,7 +9,7 @@ N = size(data, 1);          % number of samples
 A = zeros(N, 3);            % preallocate some matricies
 R = zeros(N, 1);            % "  "
 YEAR_MIN = data(1:1);
-YEAR_MAX = 2100;
+YEAR_MAX = 2200;
 % initial guesses
 q_prime = 1500000; % times 10^3 for final ans
 sigma_prime = 40;
@@ -61,4 +61,4 @@ str = sprintf(' Max Production: mu=%f', mu_prime);
 text(mu_prime, q(mu_prime, q_prime, sigma_prime, mu_prime), str);
 plot(actual_year, q(actual_year, q_prime, sigma_prime, mu_prime), 'r*');
 str = sprintf(' "Ran out" at year %d', actual_year);
-text(2020, 0.5e6, str);
+text(2080, 0.5e4, str);
