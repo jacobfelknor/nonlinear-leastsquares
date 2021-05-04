@@ -11,7 +11,11 @@ R = zeros(N, 1);            % "  "
 YEAR_MIN = data(1:1);
 YEAR_MAX = 2200;
 % initial guesses
-q_prime = 2000000; % times 10^3 for final ans
+% q is fixed for this problem, input 1 of following values
+% 2000000 --> 2 trillion after scaling
+% 3000000 --> 3 trillion after scaling
+% 4000000 --> 4 trillion after scaling
+q_prime = 4000000; % times 10^3 for final ans
 sigma_prime = 40;
 mu_prime = 2000;
 na = 0;
